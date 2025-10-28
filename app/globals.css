@@ -1,14 +1,19 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+	--bg-secondary: #f0f0f0;
+  --fg-secondary: #202020;
 	--brand: #ff2222;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+	--color-bg-secondary: var(--bg-secondary);
+  --color-fg-secondary: var(--fg-secondary);
 	--color-brand: var(--brand);
 	--bg-brand: var(--brand);
 }
@@ -17,6 +22,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+		--bg-secondary: #202020;
+		--fg-secondary: #f0f0f0;
   }
 }
 
@@ -26,18 +33,11 @@ body {
   font-family: var(--font-poppins);
 }
 
-@keyframes hideChatBubble{
-	0%{
-		transform: scale(100%);
-	}
-	50%{
-		transform: scale(0%);
-	}
-	100%{
-		transform: scale(100%);
-	}
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
 }
 
-.bg {
-	background-color: blue;
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
