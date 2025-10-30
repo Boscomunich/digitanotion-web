@@ -1,6 +1,3 @@
-'use client'
-
-import { useState } from 'react';
 
 const testimonials = [
 	{
@@ -34,45 +31,20 @@ const testimonials = [
 		text: "I have created so many tools using the knowledge and skills I got from their training. I highly recommend them.",
 	}
 ]
-
+	
 export default function Testimonials() {
 	
-	const [activeTestimonial, setActiveTestimonial] = useState(2);
-	
-	const testimonialPosition = () => {
-		if (activeTestimonial == 0) {
-			return ("translate-x-[200px] md:translate-x-[375px]")
-		}
-		else if (activeTestimonial == 1) {
-			return ("translate-x-[100px] md:translate-x-[187px]")
-		}
-		else if (activeTestimonial == 2) {
-			return ("translate-x-[0px]")
-		}
-		else if (activeTestimonial == 3) {
-			return ("-translate-x-[100px] md:-translate-x-[187px]")
-		}
-		else if (activeTestimonial == 4) {
-			return ("-translate-x-[200px] md:-translate-x-[375px]")
-		}
-	}
-	
 	return(
-		<div className="flex flex-col py-10 box-border overflow-hidden">
+		<div className="flex flex-col py-10 box-border gap-5">
 			<div>
 				<h1 className="text-brand text-3xl px-5 text-center font-bold">What Our Students Say About Us</h1>
 			</div>
-			<div className={"flex items-center justify-center relative transition-all duration-700 " + testimonialPosition()}>
+			<div className="carousel carousel-center gap-8 px-10">
 				{
 					testimonials.map((testimonial, index) => (
-						<TestimonialItem key={index} name={testimonial.name} position={testimonial.position} image={testimonial.image} text={testimonial.text} id={index} activeTestimonial={activeTestimonial} setActiveTestimonial={setActiveTestimonial} />
-					))
-				}
-			</div>
-			<div className="flex gap-2 justify-center">
-				{
-					testimonials.map((testimonial, index) => (
-						<img key={index} src={(activeTestimonial == index) ? "/icons/active.svg" : "/icons/unactive.svg" } alt="icon" onClick={() => setActiveTestimonial(index)}/>
+						<div key={index} className={ "w-70 md:w-110 carousel-item" }>
+							<TestimonialItem testimonial={testimonial} />
+						</div>
 					))
 				}
 			</div>
@@ -80,24 +52,18 @@ export default function Testimonials() {
 	)
 }
 
-function TestimonialItem(props) {
-	
-	const { id } = props;
-	
-	let isActive;
-	
-	(id == props.activeTestimonial) ? isActive = true : isActive = false;
+function TestimonialItem({ testimonial }) {
 	
 	return(
-		<div className="flex flex-col py-5 md:py-10 px-5 md:px-16 gap-4 w-max box-border">
-			<div className={(isActive ? "" : "hidden ") + "p-3 md:p-6 w-76 md:w-120 bg-gray-100 rounded-3xl md:rounded-[30px] animation-[hideChatBubble 5s infinite]" }>
-				<p>{props.text}</p>
+		<div className={"flex flex-col gap-4 box-border"}>
+			<div className={"p-5 bg-bg-secondary rounded-3xl md:rounded-[30px]" }>
+				<p>"{testimonial.text}"</p>
 			</div>
-			<div className={(isActive ? "pl-0 " : "") + "flex gap-3 items-center"}>
-				<div className={(isActive ? "border border-brand" : "transition-transform hover:scale-120 hover:shadow-lg") + " size-15 bg-gray-100 rounded-[50%]"} onClick={() => {props.setActiveTestimonial(id)}}></div>
-				<div className={(isActive ? "" : "hidden " )}>
-					<p className="font-bold">{props.name}</p>
-					<p className={"text-gray-700"}>{props.position}</p>
+			<div className={"flex gap-3 items-center"}>
+				<div className={"size-15 bg-gray-100 rounded-[50%]"} ></div>
+				<div>
+					<p className="font-bold">{testimonial.name}</p>
+					<p className={"text-fg-secondary"}>{testimonial.position}</p>
 				</div>
 			</div>
 		</div>
