@@ -10,6 +10,10 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { RiCustomerService2Fill } from 'react-icons/ri';
 import { BiTimer } from 'react-icons/bi';
 
+//Import Styles form React-Slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 let courses = [
 	{ 
 		url: "academy/cyber-security",
