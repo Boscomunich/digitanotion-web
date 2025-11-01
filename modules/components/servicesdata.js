@@ -1,7 +1,4 @@
-// servicesData.js
-
-// Example image URLs for each service (replace with actual URLs as needed)
-const imageUrls = {
+const serviceImages = {
   "software-dev": "https://res.cloudinary.com/dnitzkowt/image/upload/v1761030948/rahul-mishra-XXMA-8fBB-g-unsplash_bqw0qc.jpg",
   "web-design": "https://res.cloudinary.com/dnitzkowt/image/upload/v1761033217/rahul-mishra-AFxxvkaTHBQ-unsplash_w8v9at.jpg",
   "automation": "https://res.cloudinary.com/dnitzkowt/image/upload/v1761033667/mohamed-nohassi-2iUrK025cec-unsplash-removebg-preview_b4teea.png",

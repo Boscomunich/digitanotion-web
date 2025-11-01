@@ -1,27 +1,21 @@
 import React from 'react'
-// Use an external Cloudinary image instead of the local asset
+
 const heroImage = 'https://res.cloudinary.com/dnitzkowt/image/upload/v1761558908/uk-black-tech-dfmsZyFVi_I-unsplash_xpzgvr.jpg'
 
 function Hero() {
   return (
     <div>
       <section className="relative overflow-hidden bg-white poppins-semibold ">
-    {/* decorative glows */}
     <div aria-hidden="true" className="pointer-events-none absolute -top-24 -left-32 h-72 w-72 rounded-full bg-gradient-to-r from-orange-500 to-red-600 opacity-20 blur-3xl"></div>
     <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -right-32 h-80 w-80 rounded-full bg-gradient-to-br from-red-500 to-orange-400 opacity-20 blur-3xl"></div>
 
-  <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
-      {/* Kicker */}
-      <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-red-700 shadow-sm">
-        <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600"></span>
-        Our Services
-      </div>
-          {/* Headline + Body */}
-  <div className="grid gap-10 lg:grid-cols-2 min-h-[60vh] lg:min-h-[70vh] items-center place-items-center">
+  <div className="mx-auto max-w-7xl px-4 py-4 sm:px-4 lg:px-8 lg:py-10">
+    
+          <div className="grid gap-10 lg:grid-cols-2 min-h-[60vh] lg:min-h-[70vh] items-center place-items-center">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <h1 className="text-3xl font-extrabold leading-tight text-neutral-900 sm:text-4xl md:text-5xl">
-            Secure. Scalable. Beautiful.<br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+            Secure. Scalable. Beautiful. <br className="hidden md:block" />
+            <span className="text-orange-600">
               Digital products built end-to-end.
             </span>
           </h1>
@@ -35,7 +29,6 @@ function Hero() {
             Our training programs nurture the next generation of tech talent with simplicity and timely results.
           </p>
 
-          {/* CTA row */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://wa.me/2348080035596?text=Hello%20my%20name%20is%20......%20I%20want%20to%20ask%20a%20few%20questions%20about%20the%20services%20you%20offer"
@@ -51,7 +44,6 @@ function Hero() {
         
           </div>
 
-          {/* Quick service badges */}
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-semibold text-neutral-700">
               🔐 Cybersecurity
@@ -65,7 +57,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Visual Panel (desktop) */}
         <div className="hidden lg:flex items-center justify-center w-full">
           <div
             className="relative w-full max-w-4xl h-96 lg:h-[520px] rounded-2xl overflow-hidden"
@@ -75,7 +66,6 @@ function Hero() {
               backgroundPosition: 'center',
             }}
           >
-            {/* Floating accent chips */}
             <div className="pointer-events-none absolute -left-6 -top-6 select-none">
               <span className="inline-flex items-center rounded-lg bg-gradient-to-r from-orange-500 to-red-500 px-3 py-1 text-xs font-semibold text-white shadow-lg shadow-orange-500/30">Cyber Excellence</span>
             </div>

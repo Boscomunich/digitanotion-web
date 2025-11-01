@@ -2,7 +2,6 @@ import Testimonials from './testimonials'
 import Link from 'next/link'
 import Image from 'next/image'
 
-//Import Icons form React icons/customerCare
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaBusinessTime } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
@@ -10,7 +9,6 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { RiCustomerService2Fill } from 'react-icons/ri';
 import { BiTimer } from 'react-icons/bi';
 
-//Import Styles form React-Slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -61,7 +59,6 @@ export default function AcademyPage() {
 			<Courses/>
 			<hr className="text-brand"/>
 			<Testimonials/>
-			<Contact/>
 		</div>
   );
 }
@@ -104,42 +101,6 @@ function Courses() {
 						</Link>
 					))
 				}
-			</div>
-		</div>
-	)
-}
-
-function Contact() {
-	
-	return(
-		<div className="flex flex-col py-5 px-5 md:px-10 gap-5 box-border bg-bg-secondary">
-			<div>
-				<h1 className="text-brand text-3xl font-bold">Reach Out</h1>
-			</div>
-			<div className="flex flex-wrap gap-x-auto gap-y-8 justify-between">
-				<div className="min-w-70 max-w-160">
-					<ul className="flex flex-col pl-2 md:pl-4 gap-4">
-						<li className="flex gap-4 items-center"><FaLocationDot className="text-foreground text-lg" /><p>Suite 6, Mgbajiaka Area, Digitanotion Limited, Along Onisha - Enugu Expy, Opposite East-End Hotel, Awka.</p></li>
-						<li className="flex gap-4 items-center"><FaBusinessTime className="text-foreground text-lg" /><p>Open from 9am to 4pm (WAT)</p></li>
-						<li className="flex gap-4 items-center"><IoMdMail className="text-foreground text-lg" /><a href="mailto:hello@digitanotion.com.ng">hello@digitanotion.com.ng</a></li>
-						<li className="flex gap-4 items-center"><FaPhoneAlt className="text-foreground text-lg" /><a href="call:+2348073735836">+234 807 373 5836</a></li>
-						<li className="flex gap-4 items-center"><RiCustomerService2Fill className="text-foreground text-lg" /><p>Customer Care</p></li>
-						<li><div className="flex gap-6">
-							<Image src='/icons/facebook.svg' alt="icon" height="15" width="15" />
-							<Image src='/icons/instagram.svg' alt="icon" height="15" width="15" />
-							<Image src='/icons/x.svg' alt="icon" height="15" width="15" className="fill-foreground stroke-foreground" />
-							<Image src='/icons/linkedIn.svg' alt="icon" height="15" width="15" />
-						</div></li>
-					</ul>
-				</div>
-				<div className="w-100">
-					<form action="POST" className="flex flex-col gap-3 w-fill" >
-						<input type="text" className="bg-background text-fg-secondary py-2 px-3 w-fill rounded-lg" placeholder="Enter your Name" required />
-						<input type="email" className="bg-background text-fg-secondary py-2 px-3 w-fill rounded-lg" placeholder="Enter your E-mail address" required/>
-						<textarea type="textbox" className="bg-background text-fg-secondary h-25 py-2 w-fill px-3 rounded-lg" placeholder="Enter your Message..." required></textarea>
-						<button type="submit" className="bg-brand py-2 flex items-center justify-center w-fill uppercase text-background font-bold rounded-lg transition-transform hover:scale-102 hover:shadow-lg">Send</button>
-					</form>
-				</div>
 			</div>
 		</div>
 	)
