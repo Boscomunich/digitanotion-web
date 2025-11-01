@@ -13,8 +13,8 @@ export const SERVICES = [
   {
     key: "software-dev",
     name: "Software Development",
-    imageDesktop: imageUrls["software-dev"],
-    imageMobile: imageUrls["software-dev"],
+  imageDesktop: serviceImages["software-dev"],
+  imageMobile: serviceImages["software-dev"],
     headline: "Need a reliable software development team?",
     blurb:
       "In Digitanotion, we understand that there is no solution without a problem, our agile software development team is keened to applying industrial standards during the development cycle of a software product from systems analysis to deployment.",
@@ -24,8 +24,8 @@ export const SERVICES = [
   {
     key: "web-design",
     name: "Web Designing",
-    imageDesktop: imageUrls["web-design"],
-    imageMobile: imageUrls["web-design"],
+  imageDesktop: serviceImages["web-design"],
+  imageMobile: serviceImages["web-design"],
     headline: "Do you want a scalable website for your business?",
     blurb:
       "Over the years, we have helped businesses, individuals, organizations, institutions enjoy an overwhelming presence online. Our websites are simple and magical, responsive, user-friendly, search engine friendly, efficient and secure.",
@@ -35,8 +35,8 @@ export const SERVICES = [
   {
     key: "automation",
     name: "Business Automation",
-    imageDesktop: imageUrls["automation"],
-    imageMobile: imageUrls["automation"],
+  imageDesktop: serviceImages["automation"],
+  imageMobile: serviceImages["automation"],
     headline: "Business Automation ",
     blurb:
       "Our Business automation model is potent in scaling businesses, increasing your sales, reducing physical energy (man-power) in managing business activities. We can help you build a a custom solution to automate your business processes, you know.",
@@ -46,8 +46,8 @@ export const SERVICES = [
   {
     key: "mobile-dev",
     name: "Mobile App Development",
-    imageDesktop: imageUrls["mobile-dev"],
-    imageMobile: imageUrls["mobile-dev"],
+  imageDesktop: serviceImages["mobile-dev"],
+  imageMobile: serviceImages["mobile-dev"],
     headline: "Mobile App Development",
     blurb:
       "The invent of mobile devices has drastically influenced the tech ecosystem real good. Any mobile targeted solution at the now stands a chance to scale through because of the consistent increase of mobile users. We can help you build a custom Android or IOS app to solve that problem, just bring it on.",
@@ -57,8 +57,8 @@ export const SERVICES = [
   {
     key: "pentest",
     name: "Ethical Hacking (PenTesting)",
-    imageDesktop: imageUrls["pentest"],
-    imageMobile: imageUrls["pentest"],
+  imageDesktop: serviceImages["pentest"],
+  imageMobile: serviceImages["pentest"],
     headline: "Ethical Hacking (Pen Testing)",
     blurb:
       "Hackers are not gods, they are not spirits or some kind of magicians either, they are normal human with some skills to exploit peoples vulnerable moments (often caused by carelessness) to comprise their Confidentiality, Integrity and Availability (CIA) . We have a team of Trained Penetration Testers, who can help protect your website, mobile app, network, etc. from the black or even the grey hats.",
@@ -68,8 +68,8 @@ export const SERVICES = [
   {
     key: "media",
     name: "Media Production",
-    imageDesktop: imageUrls["media"],
-    imageMobile: imageUrls["media"],
+  imageDesktop: serviceImages["media"],
+  imageMobile: serviceImages["media"],
     headline: "Need creative visuals that convert?",
     blurb:
     "COMING SOON: Our media production services will help you create stunning visuals and engaging content that captures your brand's essence and drives results. From video production to graphic design, we've got you covered.",
