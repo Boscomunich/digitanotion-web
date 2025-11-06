@@ -54,7 +54,7 @@ function Navbar() {
                                     {item.label}
                                 </Link>
 
-                                <div className="absolute left-0 mt-1 w-52 glass rounded-md shadow-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-150 group-hover:delay-0 transition-opacity duration-200 ease-in-out">
+                                <div className="absolute left-0 w-52 glass rounded-md shadow-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-150 group-hover:delay-0 transition-opacity duration-200 ease-in-out">
                                     {academySubItems.map((sub) => (
                                         <Link
                                             key={sub.href}

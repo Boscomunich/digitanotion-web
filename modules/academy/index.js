@@ -57,7 +57,6 @@ export default function AcademyPage() {
     <div className="box-border overflow-x-hidden">
 			<Hero/>
 			<Courses/>
-			<hr className="text-brand"/>
 			<Testimonials/>
 		</div>
   );
@@ -77,7 +76,7 @@ function Hero() {
 				className="brightness-80"
 			/>
 			<h1 className="text-white text-3xl font-bold w-[100%] mb-auto z-5 md:w-180 md:text-[45px]">Looking for where to gain essential Tech skills to advance your career?</h1>
-			<h3 className="text-white text-sm md:text-md z-5">Look no further because <span className="text-brand">Digitanotion</span> got you covered.</h3>
+			<h3 className="text-white text-sm md:text-md z-5">Look no further because <span className="text-brand text-bold">Digitanotion</span> got you covered.</h3>
 			<div className="z-5">
 				<h2 className="text-white md:text-lg">We offer all the courses you need to have a successful career in tech.</h2>
 				<h2 className="text-white md:text-lg">Register a course to get started.</h2>
@@ -89,11 +88,11 @@ function Hero() {
 function Courses() {
 	
 	return(
-		<div className="flex flex-col py-5 gap-10 box-border" id="courses-section">
+		<div className="flex flex-col py-6 gap-8 box-border bg-bg-secondary pb-10" id="courses-section">
 			<div>
 				<h1 className="text-brand text-3xl px-5 md:px-10 font-bold">Register Courses</h1>
 			</div>
-			<div className="flex flex-wrap gap-x-6 px-4 gap-y-10 justify-evenly w-[100%] bg-background">
+			<div className="flex flex-wrap gap-x-6 px-4 gap-y-10 justify-evenly w-[100%]">
 				{
 					courses.map((course, index) => (
 						<Link key={index} href={course.url}>
@@ -111,7 +110,7 @@ function CourseCard(props) {
 	const { url, location, image, date, title, bonus1, bonus2, bonus3, duration, price } = props.course;
 
 	return(
-		<div className="border border-gray-300 bg-bg-secondary rounded-xl p-2 w-75 relative transition-transform hover:scale-105 hover:shadow-lg">
+		<div className="border border-gray-300 bg-background rounded-xl p-2 w-75 relative transition-transform hover:scale-105 hover:shadow-lg">
 			<div className="flex gap-1 px-1 py-0.5 -top-4 -left-3.5 text-xs bg-background border border-gray-300 rounded-lg absolute">
 				<FaLocationDot />
 				<p>{location}</p>

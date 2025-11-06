@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 .glass{
     backdrop-filter: blur(4px) saturate(180%);
@@ -7,3 +8,43 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+	--bg-secondary: #f0f0f0;
+  --fg-secondary: #202020;
+	--brand: #ff2222;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+	--color-bg-secondary: var(--bg-secondary);
+  --color-fg-secondary: var(--fg-secondary);
+	--color-brand: var(--brand);
+	--bg-brand: var(--brand);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+		--bg-secondary: #202020;
+		--fg-secondary: #f0f0f0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
