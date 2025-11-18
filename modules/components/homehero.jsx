@@ -30,18 +30,18 @@ export default function DigitanotionHeroFB() {
               className="mx-auto m-6 w-full max-w-2xl rounded-xl object-cover shadow-lg md:hidden"
             />
 
-            <h1 className="mt-5 text-4xl leading-tight sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+            <h1 className="mt-5 text-4xl text-foreground leading-tight sm:text-5xl md:text-6xl font-extrabold tracking-tight">
               <span className="block ">
                 Digital products that scale with your business
               </span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base md:text-lg text-stone-600">
+            <p className="mt-5 max-w-xl text-base md:text-lg text-fg-secondary">
               Digitanotion helps companies ship secure, resilient systems — faster. We handle architecture, deployments, and skills training so your team can focus on growth and customers.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/services" className="glass rounded-2xl px-5 py-3 text-sm font-semibold  shadow-lg hover:opacity-95 transition">
+              <a href="/services" className="glass bg-white rounded-2xl px-5 py-3 text-sm font-semibold  shadow-lg hover:opacity-95 transition">
                 Start a Project
               </a>
             </div>
@@ -65,7 +65,7 @@ export default function DigitanotionHeroFB() {
         </div>
 
         <motion.div
-          className="mt-2 mb-2 w-full rounded-2xl bg-transparent glass p-4 sm:p-6"
+          className="mt-2 mb-2 w-full rounded-2xl bg-white glass p-4 sm:p-6"
           variants={statsContainer}
           initial="hidden"
           whileInView="show"
@@ -99,7 +99,7 @@ function Stat({kpi,label}){
 
 function GlassCard({title,text}){
   return (
-    <motion.div variants={itemVariant} className="glass p-4 rounded-2xl text-slate-950/90">
+    <motion.div variants={itemVariant} className="glass bg-white p-4 rounded-2xl text-slate-950/90">
       <h3 className="text-sm font-semibold">{title}</h3>
       <p className="mt-1 text-xs leading-relaxed opacity-90">{text}</p>
     </motion.div>
@@ -141,7 +141,7 @@ function DeviceCard(){
               'Architected for scale',
               'Fast, reliable performance',
             ].map((t) => (
-              <div key={t} className="glass px-3 py-2 rounded-lg">{t}</div>
+              <div key={t} className="glass px-3 py-2 rounded-lg text-black">{t}</div>
             ))}
           </div>
         </div>

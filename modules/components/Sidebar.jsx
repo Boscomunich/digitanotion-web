@@ -19,7 +19,7 @@ export default function Sidebar({
         aria-hidden
       />
 
-      <div className={`absolute right-0 top-0 h-full w-80 bg-white p-4 pt-24 shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`absolute overflow-scroll right-0 top-0 h-full w-80 bg-background p-4 pt-18 shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex items-center justify-between mb-6">
           <div />
         </div>
@@ -31,7 +31,7 @@ export default function Sidebar({
                 <button
                   onClick={() => setMobileAcademyOpen(!mobileAcademyOpen)}
                   aria-expanded={mobileAcademyOpen}
-                  className={`w-full text-left inline-flex items-center justify-between gap-2 text-neutral-900 font-medium ${isActive(item.href) ? 'font-semibold' : ''} glass px-3 py-2 rounded-md`}
+                  className={`w-full text-left inline-flex items-center justify-between gap-2 text-foreground font-medium ${isActive(item.href) ? 'font-semibold' : ''} glass px-3 py-2 rounded-md`}
                 >
                   <span>{item.label}</span>
                   <span className={`${mobileAcademyOpen ? 'rotate-180' : ''} transform transition-transform`}>
@@ -43,7 +43,7 @@ export default function Sidebar({
                   <ul className="mt-2 ml-4 flex flex-col gap-2">
                     {academySubItems.map((sub) => (
                       <li key={sub.href}>
-                        <Link href={sub.href} onClick={() => { setIsOpen(false); setMobileAcademyOpen(false); }} className="text-neutral-700 text-sm">
+                        <Link href={sub.href} onClick={() => { setIsOpen(false); setMobileAcademyOpen(false); }} className="text-fg-secondary text-sm">
                           {sub.label}
                         </Link>
                       </li>
@@ -53,7 +53,7 @@ export default function Sidebar({
               </li>
             ) : (
               <li key={item.href}>
-                <Link href={item.href} onClick={() => setIsOpen(false)} className={`text-neutral-900 font-medium ${isActive(item.href) ? 'font-semibold' : ''}`} aria-current={isActive(item.href) ? 'page' : undefined}>
+                <Link href={item.href} onClick={() => setIsOpen(false)} className={`text-foreground border border-white/40 px-3 py-2 block w-full rounded-md font-medium ${isActive(item.href) ? 'font-semibold' : ''}`} aria-current={isActive(item.href) ? 'page' : undefined}>
                   {item.label}
                 </Link>
               </li>
@@ -62,39 +62,39 @@ export default function Sidebar({
         </ul>
 
         <div className="my-10 space-y-3 ">
-          <div className="bg-white p-2 rounded-lg shadow-sm overflow-hidden">
+          <div className="bg-bg-secondary border border-white/20 p-2 rounded-lg shadow-sm overflow-hidden">
             <img
               src="https://res.cloudinary.com/dnitzkowt/image/upload/v1761846803/ChatGPT_Image_Oct_27__2025__08_30_25_PM-removebg-preview_1_kobgd3.png"
               alt="Academy preview 1"
               className="w-full h-30 object-cover rounded-md"
             />
-            <p className="text-sm text-neutral-700 mt-3 text-center px-2">Explore our academy courses — beginner friendly modules to start your learning journey.</p>
+            <p className="text-sm text-fg-secondary mt-3 text-center px-2">Explore our academy courses — beginner friendly modules to start your learning journey.</p>
 
             <Link
               href="/services/techproject"
               onClick={() => setIsOpen(false)}
-              className="mt-3 inline-block w-full text-center px-3 py-2 rounded-md text-sm font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition"
+              className="mt-3 inline-block w-full text-center px-3 py-2 rounded-md text-sm font-medium text-emerald-700 bg-emerald-100 hover:bg-emerald-100 transition"
             >
               Learn more
             </Link>
           </div>
 
-          <div className="bg-white p-2 rounded-lg shadow-sm overflow-hidden">
+          <div className="bg-bg-secondary border border-white/20 p-2 rounded-lg shadow-sm overflow-hidden">
             <img
               src="https://res.cloudinary.com/dnitzkowt/image/upload/v1761846615/ChatGPT_Image_Oct_27__2025__08_37_46_PM-removebg-preview_aomvcv.png"
               alt="Academy preview 2"
               className="w-full h-40 object-cover rounded-md"
             />
-            <p className="text-sm text-neutral-700 mt-3 text-center px-2">Hands-on projects and practical lessons to build real skills you can show.</p>
+            <p className="text-sm text-fg-secondary mt-3 text-center px-2">Hands-on projects and practical lessons to build real skills you can show.</p>
           </div>
 
-          <div className="bg-white p-2 rounded-lg shadow-sm overflow-hidden">
+          <div className="bg-bg-secondary border border-white/20 p-2 rounded-lg shadow-sm overflow-hidden">
             <img
               src="https://res.cloudinary.com/dnitzkowt/image/upload/v1761846597/ChatGPT_Image_Oct_27__2025__08_32_59_PM-removebg-preview_wx1rqg.png"
               alt="Academy preview 3"
               className="w-full h-20 object-cover rounded-md"
             />
-            <p className="text-sm text-neutral-700 mt-3 text-center px-2">Career support and guidance — pathways to internships and job-ready portfolios.</p>
+            <p className="text-sm text-fg-secondary mt-3 text-center px-2">Career support and guidance — pathways to internships and job-ready portfolios.</p>
           </div>
         </div>
       </div>

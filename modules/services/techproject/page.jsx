@@ -18,7 +18,7 @@ export default function Page() {
 	)}`;
 
 	return (
-		<main className="min-h-screen flex items-center justify-center bg-neutral-50 p-6">
+		<main className="min-h-screen flex items-center justify-center bg-background p-6">
 					<section className="max-w-5xl w-full glass bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl p-8 md:p-12 grid gap-8 md:grid-cols-2 items-start">
 								<div className="col-span-full flex justify-center mb-6">
 									<img

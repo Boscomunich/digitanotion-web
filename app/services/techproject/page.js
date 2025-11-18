@@ -19,14 +19,14 @@ export default function TechProjectPage() {
 	)}`;
 
 	return (
-		<main className="min-h-screen flex items-center justify-center bg-neutral-50 p-6">
+		<main className="min-h-screen flex items-center justify-center bg-background p-6">
 			<section className="max-w-5xl w-full glass bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl p-8 md:p-12 grid gap-8 md:grid-cols-2 items-start">
 				{/* Top logo (single) */}
 				<div className="col-span-full flex justify-center mb-6">
 					<img
 						src="https://res.cloudinary.com/dnitzkowt/image/upload/v1761847818/ChatGPT_Image_Oct_27__2025__08_24_20_PM-removebg-preview_frae2c.png"
 						alt="Tech6Project logo"
-						className="w-40 h-40 md:w-60 md:h-60 object-contain rounded-lg shadow-lg bg-white p-2"
+						className="w-40 h-40 md:w-60 md:h-60 object-contain rounded-lg shadow-lg bg-background p-2"
 					/>
 				</div>
 
