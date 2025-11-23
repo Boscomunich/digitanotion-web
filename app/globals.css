@@ -14,8 +14,8 @@
 	--bg-secondary: #f0f0f0;
   --fg-secondary: #202020;
 	--brand: #ff2222;
-	--brand-text: #ff2222;
-	--transparent-bg: rgba(255, 255, 255, 0.2);
+	--brand-text: #000000;
+	--transparent-bg: rgba(255, 255, 255, 0.6);
 }
 
 @theme inline {
@@ -36,7 +36,7 @@
 		--bg-secondary: #202020;
 		--brand-text: #ffffff;
 		--fg-secondary: #f0f0f0;
-		--transparent-bg: rgba(0, 0, 0, 0.2);
+		--transparent-bg: rgba(0, 0, 0, 0.6);
   }
 }
 
