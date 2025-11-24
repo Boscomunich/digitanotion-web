@@ -82,7 +82,7 @@ function Hero() {
 			/>
 			<div className="absolute h-full w-full bg-transparent-bg"></div>
 			<h1 className="mt-10 mx-5 md:mx-10 text-foreground text-[40px] font-bold mb-4 z-5 md:w-180 md:text-[45px]">Looking for where to gain essential Tech skills to advance your career?</h1>
-			<h3 className="mx-5 md:mx-10 text-brand-text md:text-lg z-5">Look no further because <span className="text-brand text-bold">Digitanotion</span> got you covered.</h3>
+			<h3 className="mx-5 md:mx-10 text-brand-text md:text-lg z-5">Look no further because <span className="font-bold">Digitanotion</span> got you covered.</h3>
 			<div className="mb-10 mx-5 md:mx-10 z-5">
 				<h2 className="text-brand-text md:text-lg">We offer all the courses you need to have a successful career in tech.</h2>
 				<h2 className="text-brand-text md:text-lg">Register a course to get started.</h2>

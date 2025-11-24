@@ -2,7 +2,7 @@
 export default function FAQ() {
 	
 	return(
-		<div className="flex flex-col py-10 gap-5 px-5 md:px-10 box-border bg-background">
+		<div className="flex flex-col py-10 gap-5 px-5 md:px-10 box-border bg-background shade">
 			<div>
 				<h1 className="text-brand text-3xl font-bold text-center">Frequently Asked Questions</h1>
 			</div>

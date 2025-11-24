@@ -54,3 +54,7 @@ body {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
+
+.shade{
+	box-shadow: 2px 2px 8px -4px black;
+}

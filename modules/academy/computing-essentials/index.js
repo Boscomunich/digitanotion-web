@@ -45,7 +45,7 @@ function Hero() {
 				<div className="w-full">
 					<h3 className="text-brand-text md:text-lg">Learn skills that will enable you to protect Digital assets.</h3>
 					<div>
-						<h2 className="text-brand-text md:text-lg max-w-110">Specialize in Cyber security and become a <span className="text-brand">Cyber security</span> professional in 6 Months.</h2>
+						<h2 className="text-brand-text md:text-lg max-w-110">Specialize in <span className="font-bold">Cyber security</span> and become a <span className="font-bold">Cyber security</span> professional in 6 Months.</h2>
 					</div>
 				</div>
 				<div className='mt-10 md:mt-0'>
@@ -83,10 +83,10 @@ function Skills() {
 				<h1 className="text-brand text-3xl font-bold md:text-center">Skills you'll learn</h1>
 			</div>
 			<ul className="flex flex-wrap gap-6 md:gap-8 justify-center w-full">
-				<li className="flex items-center border border-gray-200 rounded-2xl gap-2 py-2 px-4"><HiBadgeCheck className='text-brand' /><h3>Python</h3></li>
-				<li className="flex items-center border border-gray-200 rounded-2xl gap-2 py-2 px-4"><HiBadgeCheck className='text-brand' /><h3>JavaScript</h3></li>
-				<li className="flex items-center border border-gray-200 rounded-2xl gap-2 py-2 px-4"><HiBadgeCheck className='text-brand' /><h3>Problem Solving</h3></li>
-				<li className="flex items-center border border-gray-200 rounded-2xl gap-2 py-2 px-4"><HiBadgeCheck className='text-brand' /><h3>Ethical Hacking</h3></li>
+				<li className="flex items-center border border-gray-200 gap-2 py-1 px-3 rounded-full shade"><HiBadgeCheck className='text-brand' /><h3>Python</h3></li>
+				<li className="flex items-center border border-gray-200 gap-2 py-1 px-3 rounded-full shade"><HiBadgeCheck className='text-brand' /><h3>JavaScript</h3></li>
+				<li className="flex items-center border border-gray-200 gap-2 py-1 px-3 rounded-full shade"><HiBadgeCheck className='text-brand' /><h3>Problem Solving</h3></li>
+				<li className="flex items-center border border-gray-200 gap-2 py-1 px-3 rounded-full shade"><HiBadgeCheck className='text-brand' /><h3>Ethical Hacking</h3></li>
 			</ul>
 		</div>
 	)
@@ -109,7 +109,7 @@ function Details() {
 
 function LearnCard() {
 	return(
-		<div className="flex gap-2 border border-gray-300 rounded-xl p-5 px-8 w-full sm:w-[47%] lg:w-[30%] bg-background">
+		<div className="shade flex gap-2 border border-gray-300 rounded-xl p-5 px-8 w-full sm:w-[47%] lg:w-[30%] bg-background">
 			<div>
 				<p>You'll learn how to secure digital assets for organizations using professional Cyber security tools.</p>
 			</div>
@@ -122,7 +122,7 @@ function LearnCard() {
 
 function DetailCard() {
 	return(
-		<div className="flex flex-col border border-gray-300 rounded-xl p-5 px-8 w-full sm:w-[47%] lg:w-[30%] bg-background">
+		<div className="shade flex flex-col border border-gray-300 rounded-xl p-5 px-8 w-full sm:w-[47%] lg:w-[30%] bg-background">
 			<div className="flex items-center mb-2 gap-2">
 				<HiAcademicCap /> <h3 className="text-lg font-bold text-brand">Get Certified</h3>
 			</div>
