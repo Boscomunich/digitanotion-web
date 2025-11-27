@@ -28,15 +28,6 @@ export default function DigitanotionHeroFB() {
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-4 md:px-8">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
-            <img
-              src="/images/hero-team.png"
-              alt="Digitanotion team"
-              onError={(e) => {
-                console.warn("Hero image failed to load:", e?.target?.src);
-                e.target.style.display = "none";
-              }}
-              className="mx-auto m-6 w-full max-w-2xl rounded-xl object-cover shadow-lg md:hidden"
-            />
 
             <h1 className="mt-5 text-4xl leading-tight sm:text-5xl md:text-6xl font-extrabold tracking-tight">
               <span className="block ">

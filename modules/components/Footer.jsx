@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import { FiMapPin } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
             
@@ -45,6 +46,28 @@ export default function Footer() {
               <FaLinkedinIn />
             </a>
           </div>
+        </div>
+
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold mb-2">Services</h3>
+          <ul className="text-sm leading-relaxed space-y-2">
+            <li><Link href="/services/software-development" className="hover:underline">Software Development</Link></li>
+            <li><Link href="/services/web-designing" className="hover:underline">Web Designing</Link></li>
+            <li><Link href="/services/business-automation" className="hover:underline">Business Automation</Link></li>
+            <li><Link href="/services/mobile-app-development" className="hover:underline">Mobile App Development</Link></li>
+            <li><Link href="/services/ethical-hacking" className="hover:underline">Ethical Hacking (PenTesting)</Link></li>
+            <li><Link href="/services/media-production" className="hover:underline">Media Production</Link></li>
+          </ul>
+        </div>
+
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold mb-2">Academy</h3>
+          <ul className="text-sm leading-relaxed space-y-2">
+            <li><Link href="/academy" className="hover:underline">Overview</Link></li>
+            <li><Link href="/academy/computing-essentials" className="hover:underline">Computing Essentials</Link></li>
+            <li><Link href="/academy/web-development" className="hover:underline">Web Development</Link></li>
+            <li><Link href="/academy/cyber-security" className="hover:underline">Cyber Security</Link></li>
+          </ul>
         </div>
       </div>
 

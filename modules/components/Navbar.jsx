@@ -11,12 +11,22 @@ import Sidebar from "./Sidebar";
 function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [mobileAcademyOpen, setMobileAcademyOpen] = React.useState(false);
+    const [mobileServicesOpen, setMobileServicesOpen] = React.useState(false);
     const pathname = usePathname();
 
     const academySubItems = [
         { href: '/academy/computing-essentials', label: 'Computing Essentials' },
         { href: '/academy/web-development', label: 'Web Development' },
         { href: '/academy/cyber-security', label: 'Cyber Security' },
+    ];
+
+    const servicesSubItems = [
+        { href: '/services/software-development', label: 'Software Development' },
+        { href: '/services/web-designing', label: 'Web Designing' },
+        { href: '/services/business-automation', label: 'Business Automation' },
+        { href: '/services/mobile-app-development', label: 'Mobile App Development' },
+        { href: '/services/ethical-hacking', label: 'Ethical Hacking (PenTesting)' },
+        { href: '/services/media-production', label: 'Media Production' },
     ];
 
     const navItems = [
@@ -58,6 +68,28 @@ function Navbar() {
 
                                 <div className="absolute left-0 w-52 glass rounded-md shadow-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-150 group-hover:delay-0 transition-opacity duration-200 ease-in-out">
                                     {academySubItems.map((sub) => (
+                                        <Link
+                                            key={sub.href}
+                                            href={sub.href}
+                                            className="block px-4 py-2 text-sm text-white hover:bg-white/10"
+                                        >
+                                            {sub.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : item.href === '/services' ? (
+                            <div key={item.href} className="relative group">
+                                <Link
+                                    href={item.href}
+                                    className={`font-bold px-2 ${isActive(item.href) ? 'text-white underline decoration-2 underline-offset-4' : 'text-white hover:opacity-90'}`}
+                                    aria-current={isActive(item.href) ? 'page' : undefined}
+                                >
+                                    {item.label}
+                                </Link>
+
+                                <div className="absolute left-0 w-60 glass rounded-md shadow-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-150 group-hover:delay-0 transition-opacity duration-200 ease-in-out">
+                                    {servicesSubItems.map((sub) => (
                                         <Link
                                             key={sub.href}
                                             href={sub.href}
@@ -114,8 +146,11 @@ function Navbar() {
                 setIsOpen={setIsOpen}
                 mobileAcademyOpen={mobileAcademyOpen}
                 setMobileAcademyOpen={setMobileAcademyOpen}
+                mobileServicesOpen={mobileServicesOpen}
+                setMobileServicesOpen={setMobileServicesOpen}
                 navItems={navItems}
                 academySubItems={academySubItems}
+                servicesSubItems={servicesSubItems}
                 isActive={isActive}
             />
         </header>

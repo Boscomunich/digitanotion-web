@@ -7,8 +7,11 @@ export default function Sidebar({
   setIsOpen,
   mobileAcademyOpen,
   setMobileAcademyOpen,
+  mobileServicesOpen = false,
+  setMobileServicesOpen = () => {},
   navItems = [],
   academySubItems = [],
+  servicesSubItems = [],
   isActive = () => false,
 }) {
   return (
@@ -44,6 +47,31 @@ export default function Sidebar({
                     {academySubItems.map((sub) => (
                       <li key={sub.href}>
                         <Link href={sub.href} onClick={() => { setIsOpen(false); setMobileAcademyOpen(false); }} className="text-fg-secondary text-sm">
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ) : item.href === '/services' ? (
+              <li key={item.href}>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  aria-expanded={mobileServicesOpen}
+                  className={`w-full text-left inline-flex items-center justify-between gap-2 text-foreground font-medium ${isActive(item.href) ? 'font-semibold' : ''} glass px-3 py-2 rounded-md`}
+                >
+                  <span>{item.label}</span>
+                  <span className={`${mobileServicesOpen ? 'rotate-180' : ''} transform transition-transform`}>
+                    ▼
+                  </span>
+                </button>
+
+                {mobileServicesOpen && (
+                  <ul className="mt-2 ml-4 flex flex-col gap-2">
+                    {servicesSubItems.map((sub) => (
+                      <li key={sub.href}>
+                        <Link href={sub.href} onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }} className="text-fg-secondary text-sm">
                           {sub.label}
                         </Link>
                       </li>
