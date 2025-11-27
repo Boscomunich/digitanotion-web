@@ -47,7 +47,7 @@ export default function Testimonials() {
     centerPadding: "60px",
     focusOnSelect: true,
     infinite: true,
-		slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
 		initialSlide: 1,
     speed: 500,
@@ -55,6 +55,15 @@ export default function Testimonials() {
     autoplaySpeed: 4000,
     pauseOnHover: true,
 		responsive: [
+		{
+        breakpoint: 6000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
       {
         breakpoint: 1024,
         settings: {

@@ -31,14 +31,16 @@ function Navbar() {
 
     return (
         <header className="w-full">
-            <nav className="flex items-center justify-between fixed w-full top-0 z-50 glass rounded-none px-4">
+            <nav className="flex items-center justify-between fixed w-full top-0 z-50 h-18 glass rounded-none px-4">
                 <div className="flex items-center">
                     <Link href="/" className="inline-flex items-center" aria-label="Digitanotion home">
+											<div className="h-15">
                         <img
                             src="https://res.cloudinary.com/dnitzkowt/image/upload/v1760014135/digitalogo_bgvbai.png"
                             alt="Digitanation Logo"
-                            className="h-24 w-auto mx-2"
+                            className="h-30 absolute -top-5 w-auto mx-2"
                         />
+											</div>
                     </Link>
                 </div>
 

@@ -22,14 +22,14 @@ export default function TechStackCarousel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.9, ease: "easeInOut" }}
-      className={`${glass} p-6 md:p-8`}
+      className={`${glass} py-6 md:py-8`}
       aria-label="Technology stack carousel"
     >
-      <div className="flex items-center justify-between gap-4 mb-6">
+      <div className="flex items-center justify-between gap-4 mb-6 px-6 md:px-8">
         <h2 className="text-xl md:text-2xl font-semibold tracking-tight">
           {title}
         </h2>
-        <span className="text-xs md:text-sm text-white/60">
+        <span className="text-xs md:text-sm text-foreground/60">
           Frontend • Backend • DevOps • Cybersecurity
         </span>
       </div>

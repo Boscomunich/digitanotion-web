@@ -28,6 +28,16 @@ export default function DigitanotionHeroFB() {
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-4 md:px-8">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
+            <img
+              src="/images/hero-team.png"
+              alt="Digitanotion team"
+              onError={(e) => {
+                console.warn("Hero image failed to load:", e?.target?.src);
+                e.target.style.display = "none";
+              }}
+              className="mx-auto m-6 w-full max-w-2xl rounded-xl object-cover shadow-lg md:hidden"
+            />
+
             <h1 className="mt-5 text-4xl leading-tight sm:text-5xl md:text-6xl font-extrabold tracking-tight">
               <span className="block ">
                 Digital products that scale with your business
@@ -84,7 +94,7 @@ export default function DigitanotionHeroFB() {
         </div>
 
         <motion.div
-          className="mt-2 mb-2 w-full rounded-2xl bg-transparent glass p-4 sm:p-6"
+          className="mt-2 mb-2 w-full rounded-2xl bg-white glass p-4 sm:p-6"
           variants={statsContainer}
           initial="hidden"
           whileInView="show"
