@@ -9,7 +9,7 @@ import "swiper/css/free-mode";
 
 export default function TechStackCarousel({
   title = "Tech stack we teach & use",
-  speed = 28, // seconds per loop
+  speed = 28,
 }) {
   const items = useMemo(() => buildTechItems(), []);
 
@@ -36,8 +36,15 @@ export default function TechStackCarousel({
 
       {/* Single-row carousel for desktop/tablet, two for mobile */}
       <div className="block sm:hidden space-y-4">
-        <CarouselRow items={items.slice(0, Math.ceil(items.length / 2))} speed={speed} />
-        <CarouselRow items={items.slice(Math.ceil(items.length / 2))} speed={speed} reverse />
+        <CarouselRow
+          items={items.slice(0, Math.ceil(items.length / 2))}
+          speed={speed}
+        />
+        <CarouselRow
+          items={items.slice(Math.ceil(items.length / 2))}
+          speed={speed}
+          reverse
+        />
       </div>
       <div className="hidden sm:block">
         <CarouselRow items={items} speed={speed} />
@@ -64,7 +71,12 @@ function CarouselRow({ items, speed, reverse = false }) {
       freeMode
       loop
       speed={realSpeed}
-      autoplay={{ delay: 0, disableOnInteraction: false, reverseDirection: reverse, pauseOnMouseEnter: true }}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: reverse,
+        pauseOnMouseEnter: true,
+      }}
       className="!py-2"
     >
       {items.map((t, i) => (
@@ -102,7 +114,7 @@ function TechCard({ item }) {
           loading="lazy"
         />
       )}
-      <span className="text-sm text-white/90 group-hover:text-white truncate max-w-[10rem]">
+      <span className="text-sm group-hover:text-orange-400 truncate max-w-[10rem]">
         {item.label}
       </span>
     </div>
@@ -112,7 +124,9 @@ function TechCard({ item }) {
 function buildTechItems() {
   const skill = (key) => `https://skillicons.dev/icons?i=${key}`;
   const badge = (label, logo, color = "111") => ({
-    icon: `https://img.shields.io/badge/${encodeURIComponent(label)}-${color}?style=flat&logo=${encodeURIComponent(logo)}&logoColor=white`,
+    icon: `https://img.shields.io/badge/${encodeURIComponent(
+      label
+    )}-${color}?style=flat&logo=${encodeURIComponent(logo)}&logoColor=white`,
     kind: "badge",
   });
 
@@ -123,15 +137,31 @@ function buildTechItems() {
     { key: "tailwind", label: "TailwindCSS", icon: skill("tailwind") },
     { key: "shadcn", label: "ShadCN/UI", ...badge("ShadCN/UI", "radixui") },
     { key: "zustand", label: "Zustand", ...badge("Zustand", "react") },
-    { key: "framermotion", label: "Framer Motion", ...badge("Framer Motion", "framer") },
+    {
+      key: "framermotion",
+      label: "Framer Motion",
+      ...badge("Framer Motion", "framer"),
+    },
     { key: "axios", label: "Axios", ...badge("Axios", "axios") },
     { key: "express", label: "Express", icon: skill("express") },
     { key: "node", label: "Node.js", icon: skill("nodejs") },
     { key: "firebase", label: "Firebase", icon: skill("firebase") },
     { key: "postman", label: "Postman", icon: skill("postman") },
-    { key: "nmap", label: "Nmap", ...badge("Nmap", "securityscorecard", "0A66C2") },
-    { key: "burp", label: "Burp Suite", ...badge("Burp Suite", "bugcrowd", "FE7A16") },
-    { key: "wireshark", label: "Wireshark", ...badge("Wireshark", "wireshark", "007ACC") },
+    {
+      key: "nmap",
+      label: "Nmap",
+      ...badge("Nmap", "securityscorecard", "0A66C2"),
+    },
+    {
+      key: "burp",
+      label: "Burp Suite",
+      ...badge("Burp Suite", "bugcrowd", "FE7A16"),
+    },
+    {
+      key: "wireshark",
+      label: "Wireshark",
+      ...badge("Wireshark", "wireshark", "007ACC"),
+    },
     { key: "mongodb", label: "MongoDB", icon: skill("mongodb") },
     { key: "supabase", label: "Supabase", icon: skill("supabase") },
     { key: "git", label: "Git", icon: skill("git") },
@@ -141,14 +171,30 @@ function buildTechItems() {
     { key: "linux", label: "Linux", icon: skill("linux") },
     { key: "bash", label: "Bash", icon: skill("bash") },
     { key: "docker", label: "Docker", icon: skill("docker") },
-    { key: "cloudinary", label: "Cloudinary", ...badge("Cloudinary", "cloudinary") },
+    {
+      key: "cloudinary",
+      label: "Cloudinary",
+      ...badge("Cloudinary", "cloudinary"),
+    },
     { key: "redux", label: "Redux", icon: skill("redux") },
     { key: "graphql", label: "GraphQL", icon: skill("graphql") },
 
     // more badges that used to be tiny pills
-    { key: "swagger", label: "OpenAPI/Swagger", ...badge("OpenAPI", "swagger") },
-    { key: "zap", label: "OWASP ZAP", ...badge("OWASP ZAP", "owasp", "000000") },
-    { key: "kali", label: "Kali Linux", ...badge("Kali Linux", "linux", "268BD2") },
+    {
+      key: "swagger",
+      label: "OpenAPI/Swagger",
+      ...badge("OpenAPI", "swagger"),
+    },
+    {
+      key: "zap",
+      label: "OWASP ZAP",
+      ...badge("OWASP ZAP", "owasp", "000000"),
+    },
+    {
+      key: "kali",
+      label: "Kali Linux",
+      ...badge("Kali Linux", "linux", "268BD2"),
+    },
     { key: "render", label: "Render", ...badge("Render", "render") },
     { key: "railway", label: "Railway", ...badge("Railway", "railway") },
   ];
