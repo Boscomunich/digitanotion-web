@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-			"icons/*": ["public/icons/*"]
+      "@/*": ["./*"],
+      "icons/*": ["public/icons/*"]
     }
   }
 }

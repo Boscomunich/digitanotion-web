@@ -1,13 +1,13 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "../modules/components/Navbar";
-import Footer from "../modules/components/Footer";
+import Navbar from "../modules/home/Navbar";
+import Footer from "../modules/home/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-	display: "swap",
-	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased bg-white text-stone-950`}>
+      <body
+        className={`${poppins.variable} antialiased bg-white text-stone-950`}
+      >
         <Navbar />
         <main className="pt-18">{children}</main>
         <Footer />

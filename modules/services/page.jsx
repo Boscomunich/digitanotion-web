@@ -1,5 +1,5 @@
-import Hero from '../components/Hero'
-import WebDevSection from '../components/WebDevSection'
+import Hero from "./Hero";
+import WebDevSection from "./WebDevSection";
 
 export default function ServicesPage() {
   return (
@@ -10,5 +10,5 @@ export default function ServicesPage() {
         <WebDevSection />
       </main>
     </>
-  )
+  );
 }
